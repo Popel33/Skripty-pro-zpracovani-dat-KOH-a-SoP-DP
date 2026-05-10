@@ -52,6 +52,16 @@ kde:
 
 ---
 
+# Požadované knihovny
+
+Instalace závislostí:
+
+```bash
+pip install h5py pandas numpy matplotlib scipy
+```
+
+---
+
 # Funkce skriptu
 
 ## Zpracování signálů
@@ -184,16 +194,6 @@ V režimu `Rameno` jsou navíc barevně označeny jednotlivé fáze:
 
 * zelená = `Klid`
 * červená = `Stisk`
-
----
-
-# Požadované knihovny
-
-Instalace závislostí:
-
-```bash
-pip install h5py pandas numpy matplotlib scipy
-```
 
 ---
 
