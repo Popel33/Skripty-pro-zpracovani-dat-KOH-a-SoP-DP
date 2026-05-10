@@ -1,13 +1,13 @@
-# Optical Measurement Processing Tool
+# Podrobný popis skriptu
 
-Python program pro zpracování měřicích `.perf` souborů obsahujících optické parametry.  
-Program načítá data, filtruje vybrané parametry, provádí vyhlazení signálu, vytváří PDF grafy a generuje statistické výstupy ve formátu CSV.
+Python skript pro zpracování `.perf` souborů obsahujících optické parametry z měření.  
+Skript načítá data, filtruje vybrané parametry, provádí vyhlazení signálu, vytváří PDF grafy a generuje statistické výstupy ve formátu CSV.
 
 ---
 
-# Funkce programu
+# Funkce skriptu
 
-Program umožňuje:
+Skript umožňuje:
 
 - načítání `.perf` souborů,
 - filtrování vybraných parametrů,
@@ -23,7 +23,7 @@ Program umožňuje:
 
 # Podporované parametry
 
-Program zpracovává pouze následující parametry:
+Skript zpracovává pouze následující parametry:
 
 - `Opt rcv pwr`
 - `Q factor`
@@ -54,13 +54,13 @@ Do této složky vložte všechny `.perf` soubory určené ke zpracování.
 
 ## `vystup`
 
-Program sem automaticky ukládá:
+Skript sem automaticky ukládá:
 
 - PDF grafy,
 - CSV statistiky,
 - souhrnné výsledky.
 
-Pokud složka neexistuje, program ji vytvoří automaticky.
+Pokud složka neexistuje, skript ji vytvoří automaticky.
 
 ---
 
@@ -78,9 +78,9 @@ pip install pandas matplotlib numpy
 
 ---
 
-# Spuštění programu
+# Spuštění skriptu
 
-Program spusťte příkazem:
+Skript spusťte příkazem:
 
 ```bash
 python parcelingKOH_final.py
@@ -95,7 +95,7 @@ Po spuštění se zobrazí nabídka:
 
 ---
 
-# Režimy programu
+# Režimy skriptu
 
 ## 1. Rameno — detekce fází Klid / Síla
 
@@ -104,7 +104,7 @@ Tento režim slouží pro měření, kde dochází ke střídání:
 - klidové fáze,
 - působení síly.
 
-Program:
+Skript:
 
 1. analyzuje parametr `Opt rcv pwr`,
 2. automaticky určí rozhodovací práh,
@@ -113,7 +113,7 @@ Program:
 
 ### Výstupy
 
-Program vytvoří:
+Skript vytvoří:
 
 - PDF grafy pro každý soubor,
 - CSV s vyčištěnými daty,
@@ -129,7 +129,7 @@ souhrnne_statistiky.csv
 
 Tento režim neprovádí detekci fází.
 
-Program pouze počítá:
+Skript pouze počítá:
 
 - celkový průměr,
 - směrodatnou odchylku.
@@ -152,7 +152,7 @@ souhrn_vsech_prumeru.csv
 
 # Zpracování dat
 
-Program:
+Skript:
 
 1. načte data ze `.perf` souborů,
 2. pomocí regulárního výrazu vyhledá relevantní záznamy,
@@ -174,7 +174,7 @@ Tím se redukuje šum a krátkodobé výkyvy měření.
 
 # Generování grafů
 
-Program automaticky vytváří PDF grafy všech parametrů.
+Skript automaticky vytváří PDF grafy všech parametrů.
 
 Každý vstupní `.perf` soubor má vlastní PDF:
 
@@ -192,7 +192,7 @@ Obsahuje:
 
 # Srovnání všech měření
 
-Po dokončení program vytvoří:
+Po dokončení skript vytvoří:
 
 ```text
 srovnani_vsech_mereni.pdf
@@ -212,7 +212,7 @@ Detekce fází využívá parametr:
 Opt rcv pwr
 ```
 
-Program:
+Skript:
 
 1. vypočítá mediánový průběh,
 2. určí 10% a 90% kvantil,
@@ -243,7 +243,7 @@ Krátké segmenty jsou odstraněny jako šum.
 
 # Ošetření chyb
 
-Program kontroluje:
+Skript kontroluje:
 
 - existenci složky `vstup`,
 - přítomnost `.perf` souborů,
@@ -264,7 +264,3 @@ V případě problému vypíše chybovou hlášku místo okamžitého ukončení
 - sys
 
 ---
-
-# Autor
-
-Interní nástroj pro analýzu optických měření a automatické generování statistik.
