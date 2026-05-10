@@ -64,6 +64,17 @@ Pokud složka neexistuje, skript ji vytvoří automaticky.
 
 ---
 
+# Použité knihovny
+
+- pandas
+- matplotlib
+- numpy
+- re
+- os
+- sys
+
+---
+
 # Instalace
 
 ## Požadavky
@@ -251,16 +262,3 @@ Skript kontroluje:
 - neočekávané chyby během běhu.
 
 V případě problému vypíše chybovou hlášku místo okamžitého ukončení.
-
----
-
-# Použité knihovny
-
-- pandas
-- matplotlib
-- numpy
-- re
-- os
-- sys
-
----
