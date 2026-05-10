@@ -1,4 +1,4 @@
-# parcelingSOP
+# podrobný popis skriptu
 
 Python skript pro automatizované zpracování a analýzu měřicích `.hdf5` souborů obsahujících signály `S0`, `S1`, `S2`, `S3` a `Bal`.
 
