@@ -52,14 +52,28 @@ kde:
 
 ---
 
-# Požadované knihovny
+# Instalace
 
-Instalace závislostí:
+Instalace knihoven:
 
 ```bash
 pip install h5py pandas numpy matplotlib scipy
 ```
 
+---
+
+# Spuštění skriptu
+
+```bash
+python parcelingSOP.py
+```
+
+Po spuštění program nabídne výběr režimu:
+
+```text
+1 - Rameno
+2 - Ostatní
+```
 ---
 
 # Funkce skriptu
@@ -196,16 +210,3 @@ V režimu `Rameno` jsou navíc barevně označeny jednotlivé fáze:
 * červená = `Stisk`
 
 ---
-
-# Spuštění skriptu
-
-```bash
-python parcelingSOP.py
-```
-
-Po spuštění program nabídne výběr režimu:
-
-```text
-1 - Rameno
-2 - Ostatní
-```
