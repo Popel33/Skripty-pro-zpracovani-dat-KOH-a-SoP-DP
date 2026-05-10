@@ -2,7 +2,7 @@
 
 Python skript pro automatizované zpracování a analýzu měřicích `.hdf5` souborů obsahujících signály `S0`, `S1`, `S2`, `S3` a `Bal`.
 
-Skript provádí:
+Skript umožňuje:
 
 * načtení a předzpracování signálů,
 * normalizaci dat,
@@ -11,6 +11,44 @@ Skript provádí:
 * automatickou segmentaci měření na fáze `Klid` / `Stisk`,
 * generování PDF grafů,
 * export výsledků do CSV souborů.
+
+---
+
+# Formát vstupních souborů
+
+Skript očekává `.hdf5` soubory obsahující datasety:
+
+```text
+S0
+S1
+S2
+S3
+Bal
+```
+
+Vzorkovací frekvence musí být uvedena v názvu souboru.
+
+Příklad:
+
+```text
+001-test_1000.hdf5
+```
+
+kde:
+
+```text
+1000 = fs
+```
+
+---
+
+# Použité knihovny
+
+* h5py
+* pandas
+* numpy
+* matplotlib
+* scipy.signal
 
 ---
 
@@ -171,43 +209,3 @@ Po spuštění program nabídne výběr režimu:
 1 - Rameno
 2 - Ostatní
 ```
-
----
-
-# Formát vstupních souborů
-
-Skript očekává `.hdf5` soubory obsahující datasety:
-
-```text
-S0
-S1
-S2
-S3
-Bal
-```
-
-Vzorkovací frekvence musí být uvedena v názvu souboru.
-
-Příklad:
-
-```text
-001-test_1000.hdf5
-```
-
-kde:
-
-```text
-1000 = fs
-```
-
----
-
-# Použité knihovny
-
-* h5py
-* pandas
-* numpy
-* matplotlib
-* scipy.signal
-
----
